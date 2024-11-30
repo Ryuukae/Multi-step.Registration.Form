@@ -1,0 +1,92 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta info -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Registration Form</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <!-- css files -->
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- scripts -->
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+<main>
+    <div id="multi-step-form-container">
+        <!-- Form 1 -->
+        <div id="form-1-div" class="active-form-step">
+            <form id="form-1" name="form-1">
+                <h2 id="form-1-header" class="heading-font">Register</h2>
+                <label for="name-input" class="label label-font">Name: </label>
+                <input type="text" id="name-input" name="name-input" class="small-text-font" placeholder="enter your name" required>
+                <br>
+                <label for="email-input" class="label-font label">Email: </label>
+                <input type="email" id="email-input" name="email-input" class="small-text-font" placeholder="example@gmail.com" required>
+                <button type="submit" id="form-1-next-btn" name="form-1-next-btn" class="small-text-font">Continue</button>
+            </form>
+        </div>
+
+        <!-- Form 2 -->
+        <div id="form-2-div" class="hidden-form-step">
+            <form id="form-2">
+                <h2 id="form-2-header" class="heading-font">Which topics are you interested in?</h2>
+                <div id="topic-select">
+                    <label>
+                        <input type="checkbox" id="topic-1" name="topic" value="Software Development" hidden>
+                        <span class="check-box-button tab-font">Software Development</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="topic-2" name="topic" value="User Experience" hidden>
+                        <span class="check-box-button tab-font">User Experience</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="topic-3" name="topic" value="Graphic Design" hidden>
+                        <span class="check-box-button tab-font">Graphic Design</span>
+                    </label>
+                </div>
+                <button type="submit" id="form-2-next-btn" name="form-2-next-btn" class="small-text-font">Continue</button>
+            </form>
+        </div>
+
+        <!-- Form 3 -->
+        <div id="form-3-div" class="hidden-form-step">
+            <form id="form-3">
+                <h2 id="form-3-header">Summary</h2>
+                <label for="form-3-name-output" class="label label-font">Name:</label>
+                <!-- output selected items from form 1 -->
+                <p class="tab" id="form-3-name-output"></p>
+                <br>
+                <label for="form-3-email-output" class="label label-font">Email:</label>
+                <p class="tab" id="form-3-email-output"></p>
+                <br>
+                <br>
+                <label for="form-3-topic-output" class="label label-font">Topics:</label>
+                <!-- output selected items from form 2 -->
+                <div id="form-3-topic-output" class="tab-font"></div>
+                <button type="submit" id="form-3-submit-btn" class="small-text-font">Confirm</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Stage indicator -->
+    <div id="stage-indicator-div">
+        <span id="current-step" class="label-font">Step 1 of 3</span>
+        <div id="stage-indicators" class="stage-indicators">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</main>
+</body>
+</html>

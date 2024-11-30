@@ -1,0 +1,8 @@
+E5E7EB white
+A1A1A9 grey
+4D5562 dark-1
+394150 dark-2
+212936 dark-3
+121826 dark-4
+845EEE light-purple
+652CD1 dark-purple
