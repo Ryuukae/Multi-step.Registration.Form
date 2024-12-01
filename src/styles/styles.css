@@ -272,9 +272,6 @@ input[type="checkbox"]:checked + .check-box-button {
         margin-right: 15rem;
     }
 
-    #current-step {
-        margin-left: 7.5rem; /* Adjust absolute positioning for smaller screens */
-    }
 }
 
 @media (max-width: 768px) {
@@ -294,7 +291,7 @@ input[type="checkbox"]:checked + .check-box-button {
     }
 
     #current-step {
-        margin-left: 6rem; /* Adjust absolute positioning for smaller screens */
+        margin-left: 7rem; /* Adjust absolute positioning for smaller screens */
     }
 }
 
@@ -306,23 +303,24 @@ input[type="checkbox"]:checked + .check-box-button {
 
 @media (max-width: 640px) {
     main {
-        max-width: 400px;
+        max-width: 500px;
+        
     }
 
     button {
-        width: 50%;
         padding: 1rem!important;
         font-size: 13px!important; /* Adjust font size for smaller screens */
     }
 
     .stage-indicators {
-        margin-left: 10rem; /* Reduce left and right margins for smaller screens */
-        margin-right: 10rem;
+        margin-left: 13rem; /* Reduce left and right margins for smaller screens */
+        margin-right: 13rem;
     }
 
     #current-step {
-        margin-left: 5.5rem; /* Adjust absolute positioning for smaller screens */
+        margin-left: 8rem; /* Adjust absolute positioning for smaller screens */
     }
+
 }
 
 
@@ -343,18 +341,22 @@ input[type="checkbox"]:checked + .check-box-button {
     }
 
     .stage-indicators {
-        margin-left: 8rem; /* Reduce left and right margins for smaller screens */
-        margin-right: 8rem;
+        margin-left: 9rem; /* Reduce left and right margins for smaller screens */
+        margin-right: 9rem;
     }
 
     #current-step {
-        margin-left: 4rem; /* Adjust absolute positioning for smaller screens */
+        margin-left: 3.5rem; /* Adjust absolute positioning for smaller screens */
+    }
+
+    .dot {
+        
     }
 }
 
 @media (max-width: 320px) {
     main {
-        max-width: 200px;
+        max-width: 300px;
     }
 
     button {
@@ -369,6 +371,6 @@ input[type="checkbox"]:checked + .check-box-button {
     }
 
     #current-step {
-        margin-left: 3rem; /* Adjust absolute positioning for smaller screens */
+        margin-left: 1.5rem; /* Adjust absolute positioning for smaller screens */
     }
 }
