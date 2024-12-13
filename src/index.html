@@ -1,37 +1,73 @@
 <!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- meta info -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> <!-- Character set declaration -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design meta -->
+
+    <!-- SEO meta tags -->
+    <meta name="description" content="A multi-step user registration form."> <!-- Summary of the page -->
+    <meta name="keywords" content="registration, multi-step form, user input, sign up"> <!-- Keywords for the page -->
+
+    <!-- Open Graph protocol for social media previews -->
+    <meta property="og:title" content="Multi-Step Registration Form">
+    <meta property="og:description" content="A smooth user registration experience through a multi-step form.">
     <title>Multi-Step Registration Form</title>
 
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconnecting to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconnecting with cross-origin -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@300&display=swap" rel="stylesheet"> <!-- Importing fonts -->
 
     <!-- css files -->
-    <link rel="stylesheet" href="styles/fonts.css">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="./styles/base-styles.css"> <!-- Base styles -->
+    <link rel="stylesheet" type="text/css" href="./styles/font-styles.css"> <!-- Font styles -->
+    <link rel="stylesheet" type="text/css" href="./styles/responsive-styles.css"> <!-- Styles for responsiveness -->
+    <link rel="stylesheet" type="text/css" href="styles/error-notification-styles.css"> <!-- Styles for notifications -->
 
     <!-- scripts -->
-    <script src="scripts/script.js" defer></script>
+    <script src="./scripts/script.js" type="module" defer></script> <!-- Main JavaScript file -->
 </head>
 <body>
 <main>
+    <!-- form display container -->
     <div id="multi-step-form-container">
+
         <!-- Form 1 -->
         <div id="form-1-div" class="active-form-step">
+            <!-- Form tag with ID and name -->
             <form id="form-1" name="form-1">
+                <!-- Form input section -->
                 <h2 id="form-1-header" class="heading-font">Register</h2>
-                <label for="name-input" class="label label-font">Name: </label>
-                <input type="text" id="name-input" name="name-input" class="small-text-font" placeholder="enter your name" required>
+
+                <!-- Input for name -->
+                <div class="form-control">
+                    <label for="name-input" class="label label-font">Name: </label>
+                    <input type="text" id="name-input" name="name-input" class="small-text-font"
+                           title="Enter a name that contains only letters and at most 3 words."
+                           placeholder="enter your name" required>
+                    <!-- Container for validation messages -->
+                    <small></small>
+                </div>
                 <br>
-                <label for="email-input" class="label-font label">Email: </label>
-                <input type="email" id="email-input" name="email-input" class="small-text-font" placeholder="example@gmail.com" required>
+
+                <!-- Input for email -->
+                <div class="form-control">
+                    <label for="email-input" class="label-font label">Email: </label>
+                    <input type="email" id="email-input" name="email-input" class="small-text-font" title="Syntax:
+<USERNAME>@<SUB-DOMAIN(S)>.<TLD>
+
+Examples:
+john.doe@example.com
+jane.doe@example.co.uk
+example@gmail.com"
+                           placeholder="example@gmail.com" required>
+                    <!-- Container for validation messages -->
+                    <small></small>
+                </div>
+
+                <!-- Button to proceed to the next form -->
                 <button type="submit" id="form-1-next-btn" name="form-1-next-btn" class="small-text-font">Continue</button>
             </form>
         </div>
@@ -39,21 +75,29 @@
         <!-- Form 2 -->
         <div id="form-2-div" class="hidden-form-step">
             <form id="form-2">
+                <!-- topic selection section -->
                 <h2 id="form-2-header" class="heading-font">Which topics are you interested in?</h2>
+
+                <!-- Container for topic selection -->
                 <div id="topic-select">
+                    <!-- Checkbox for Software Development -->
                     <label>
                         <input type="checkbox" id="topic-1" name="topic" value="Software Development" hidden>
                         <span class="check-box-button tab-font">Software Development</span>
                     </label>
+                    <!-- Checkbox for User Experience -->
                     <label>
                         <input type="checkbox" id="topic-2" name="topic" value="User Experience" hidden>
                         <span class="check-box-button tab-font">User Experience</span>
                     </label>
+                    <!-- Checkbox for Graphic Design -->
                     <label>
                         <input type="checkbox" id="topic-3" name="topic" value="Graphic Design" hidden>
                         <span class="check-box-button tab-font">Graphic Design</span>
                     </label>
                 </div>
+
+                <!-- Button to proceed to the next form -->
                 <button type="submit" id="form-2-next-btn" name="form-2-next-btn" class="small-text-font">Continue</button>
             </form>
         </div>
@@ -61,26 +105,38 @@
         <!-- Form 3 -->
         <div id="form-3-div" class="hidden-form-step">
             <form id="form-3">
+                <!-- Form summary section -->
                 <h2 id="form-3-header">Summary</h2>
+
+                <!-- Display name -->
                 <label for="form-3-name-output" class="label label-font">Name:</label>
-                <!-- output selected items from form 1 -->
+                <!-- Placeholder for displaying the entered name -->
                 <p class="tab" id="form-3-name-output"></p>
                 <br>
+
+                <!-- Display email -->
                 <label for="form-3-email-output" class="label label-font">Email:</label>
+                <!-- Container for displaying the entered email -->
                 <p class="tab" id="form-3-email-output"></p>
                 <br>
                 <br>
+
+                <!-- Display selected topics -->
                 <label for="form-3-topic-output" class="label label-font">Topics:</label>
-                <!-- output selected items from form 2 -->
+                <!-- Container for displaying selected topics -->
                 <div id="form-3-topic-output" class="tab-font"></div>
+
+                <!-- Final submit button -->
                 <button type="submit" id="form-3-submit-btn" class="small-text-font">Confirm</button>
             </form>
         </div>
     </div>
 
-    <!-- Stage indicator -->
+    <!-- Stage indicator container-->
     <div id="stage-indicator-div">
+        <!-- Current step text -->
         <span id="current-step" class="label-font">Step 1 of 3</span>
+        <!-- Dots indicating steps -->
         <div id="stage-indicators" class="stage-indicators">
             <span class="dot active"></span>
             <span class="dot"></span>

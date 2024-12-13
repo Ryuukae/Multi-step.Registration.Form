@@ -1,0 +1,33 @@
+/* font-styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/*-----------*/
+/*---FONT STYLES---*/
+/*-----------*/
+.heading-font {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.25rem;
+}
+
+.tab-font {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 0.875rem;
+}
+
+.body-font {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+.label-font, .small-text-font {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 0.75rem;
+}

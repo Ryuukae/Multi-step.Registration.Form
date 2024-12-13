@@ -1,0 +1,39 @@
+/* error-notification-styles.css */
+
+/*-----------------------------------*/
+/*---ERROR NOTIFICATION STYLES---*/
+/*-----------------------------------*/
+.form-control.error input {
+    border-color: rgba(244, 67, 54, 0.3);
+    color: #ff3c31 !important;
+    font-style: italic;
+    text-decoration: dotted underline;
+}
+
+.form-control.error input::placeholder {
+    color: #ff3c31;
+    font-size: 12px;
+    font-style: italic;
+    opacity: 1;
+    text-align: left;
+    text-decoration: dotted underline;
+}
+
+.form-control.error input:focus {
+    border-color: var(--dark-1);
+    color: var(--white) !important;
+}
+
+.form-control small {
+    display: none;
+}
+
+.form-control.error small {
+    align-items: center;
+    color: #f5483c;
+    display: block;
+    font-size: 13px;
+    line-height: 1.1;
+    margin: 0.16rem 1rem -0.5rem 1rem;
+    text-align: justify;
+}

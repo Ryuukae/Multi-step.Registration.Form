@@ -1,0 +1,136 @@
+/*responsive-styles.css*/
+
+/*----------------------*/
+/*---RESPONSIVE STYLES--*/
+/*----------------------*/
+@media (max-width: 1024px) {
+    main {
+        max-width: 800px;
+    }
+
+    button {
+        width: 50%;
+        padding: 1rem;
+        font-size: 14px;
+    }
+
+    .stage-indicators {
+        margin-left: 15rem;
+        margin-right: 15rem;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        max-width: 600px;
+    }
+
+    button {
+        width: 50%;
+        padding: 1rem;
+        font-size: 13px;
+    }
+
+    .stage-indicators {
+        margin-left: 12rem;
+        margin-right: 12rem;
+    }
+
+    #current-step {
+        margin-left: 7rem;
+    }
+
+    #form-1-next-btn, #form-2-next-btn, #form-3-submit-btn {
+        width: 50%;
+    }
+}
+
+@media (max-width: 640px) {
+    main {
+        max-width: 500px;
+    }
+
+    button {
+        padding: 1rem;
+        font-size: 13px;
+    }
+
+    .stage-indicators {
+        margin-left: 13rem;
+        margin-right: 13rem;
+    }
+
+    #current-step {
+        margin-left: 8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        max-width: 350px;
+    }
+
+    button {
+        width: 50%;
+        padding: 1rem;
+        font-size: 12px;
+    }
+
+    #multi-step-form-container {
+        width: auto;
+    }
+
+    .stage-indicators {
+        margin-left: 9rem;
+        margin-right: 9rem;
+    }
+
+    #current-step {
+        margin-left: 3.5rem;
+    }
+}
+
+@media (max-width: 380px) {
+    main {
+        max-width: 300px;
+        min-width: 300px;
+    }
+
+    #multi-step-form-container {
+        width: auto;
+    }
+
+    .stage-indicators {
+        margin-left: 7.5rem;
+        margin-right: 7.5rem;
+    }
+
+    #current-step {
+        margin-left: 2.5rem;
+    }
+
+    .form-control.error small {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    main {
+        max-width: 300px;
+    }
+
+    button {
+        width: 50%;
+        padding: 1rem;
+        font-size: 11px;
+    }
+
+    .stage-indicators {
+        margin-left: 6rem;
+        margin-right: 6rem;
+    }
+
+    #current-step {
+        margin-left: 1.5rem;
+    }
+}
